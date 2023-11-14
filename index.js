@@ -103,7 +103,54 @@ async function getConnection() {
     }
   });
 
-  ///eliminar
+  
 
 
 ///actualizar
+
+
+app.put("/api/others/:id" , async (req, res)=> {
+
+    const dataCharacter = req.body;
+    const {Name, Alias, Weapon} = dataCharacter;
+
+    const idCharacters = req.params.id;
+
+
+    let sql = " UPDATE Other_Characters SET  alias = ?,  Name = ? , Weapon = ? WHERE idOther_Characters = ?;"
+
+    const conn = await getConnection();
+
+    const [results] = await conn.query ( sql, [
+        Name, Alias, Weapon , idCharacters
+    ]); 
+    res.json({
+        success: true, 
+        message: "actualizado correctamente"
+    })
+}
+);
+
+///eliminar 
+
+app.delete("/api/others/:id" , async (req, res)=> {
+
+    const idCharacters = req.params.id;
+
+
+    let sql = " DELETE FROM Other_Characters  WHERE idOther_Characters = ?;"
+
+    const conn = await getConnection();
+
+    const [results] = await conn.query ( sql, [
+        idCharacters
+    ]); 
+    res.json({
+        success: true, 
+        message: "eliminado correctamente"
+    })
+}
+);
+
+
+
