@@ -1,0 +1,6 @@
+.body {
+    height: 100vh;
+    background-color: yellow;
+    background-image: url('/KB.jpg');
+    background-size: cover;text-align: center;
+}
