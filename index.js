@@ -6,6 +6,9 @@ require("dotenv").config();
 const jwt = require('jsonwebtoken');
 const bcrypt = require("bcrypt");
 
+// const swaggerUi = require('swagger-ui-express');
+// const swaggerDocument = require('./swagger.json');
+
 ///crear servidor
 const app = express();
 
@@ -15,7 +18,7 @@ app.use(express.json({ limit: "25mb" }));
 
 ///iniciar el servidor
 
-const port = process.env.PORT
+const port = 3000
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
@@ -36,6 +39,9 @@ async function getConnection() {
   return connection;
 
 }
+
+///Swager
+// app.use("/api.docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 ///endpoint death list five
 app.get("/api/listFive", async (req, res) => {
