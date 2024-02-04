@@ -10,8 +10,10 @@ import Landing from './Landing'
 import FiveList from './FiveList';
 import Others from './Others';
 import CharacterDetail from './CharactersDetail';
-// import FiveList from './FiveList';
-// import Others from './Others';
+import "../styles/App.scss";
+
+
+
 
 
 
@@ -111,7 +113,7 @@ function App() {
   element={
     <>
      {console.log("characterData in App.js:", characterData)}
-     {console.log("charId:", charId)};
+     {console.log("charId:", charId)}
       <CharacterDetail characterData={characterData} />
     </>
   }

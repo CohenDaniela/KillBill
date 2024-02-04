@@ -124,7 +124,7 @@ app.get('/api/:id', async (req, res) => {
   ///get id by params
   const id = req.params.id;
   //Query
-  const queryCharacter= "SELECT * FROM death_list_five WHERE id_character = ?;";
+  const queryCharacter= "SELECT * FROM death_list_five WHERE id_character = ?";
   //getConnection
   const conn = await getConnection();
   //Execute query

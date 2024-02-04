@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CharacterDetail = ({ characterData }) => {
   if (!characterData) {
     // Puedes manejar el caso en que characterData sea undefined aquí
-    return <p>Cargando...</p>;
+    return <p>Cargando...</p>
   }
   return (
     <>
