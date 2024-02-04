@@ -1,23 +1,24 @@
 
-const callToFiveList = () => {
-  return fetch("http://localhost:3000/api/listFive")
-    .then((response) => response.json())
+const callToApi = () => {
+  return fetch("http://localhost:3001/api/killbill")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((result) => {
-      return result; // Suponiendo que la API devuelve un objeto directamente
+      return result;
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error.message);
+      throw error;
     });
 };
 
-const callToOthers = () => {
-  return fetch("http://localhost:3000/api/others")
-    .then((response) => response.json())
-    .then((result) => {
-      return result; // Suponiendo que la API devuelve un objeto directamente
-    });
-};
 
-const objectApi = {
-  getA: callToFiveList,
-  getC: callToOthers,
-};
 
-export default objectApi;
+
+
+
+export default callToApi;
