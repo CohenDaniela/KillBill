@@ -5,28 +5,32 @@
     background-color: #f8c745;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 10px
+    gap: 15px;
+   
+  
 }
 
-.landingTitle{
-    text-transform: uppercase;
-  font-size: 50px;
-    
-}
+
 
 .landingLinkFive{
     text-decoration: none;
     color: black;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
 .landingLinkOthers{
     text-decoration: none;
 color: black;
+text-transform: uppercase;
+font-size: 10px;
 
 }
 .landingImg {
-    height: 200px;
+    width: 350px;
   border-radius: 60%;
+  
+ 
   }

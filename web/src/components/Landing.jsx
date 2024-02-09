@@ -2,10 +2,11 @@
 // import Others from "./Others";
 import { Link } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+import image from '../images/1.png'
 
 import '../styles/layouts/landing.scss'
 import '../styles/core/reset.scss'
-import image from '../images/killbill.jpg'
+
 
 
 
@@ -20,8 +21,8 @@ function Landing ({character}){
     return (
         <>
       <main className="landingMain">
-      <h1 className="landingTitle">Kill Bill</h1>
-      <img src={image}    alt=""  className="landingImg"/>
+      
+     <img src={image}    alt=""  className="landingImg"/>
       
       
 

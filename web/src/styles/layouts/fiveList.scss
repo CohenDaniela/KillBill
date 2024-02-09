@@ -1,0 +1,72 @@
+
+.mainList {
+    background-color: #f8c745;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
+
+.li {
+    list-style: none;
+    
+}
+
+.link {
+    text-decoration: none;
+}
+
+  
+.name {
+  position: relative;
+  display: inline-block;
+  color: black;
+  cursor: pointer;
+}
+
+.crossout::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid red;
+  transform: translateY(50%);
+  transition: transform 0.3s;
+}
+
+.crossed {
+  transform: translateY(0);
+}
+
+// .name {
+//     position: relative;
+//     display: inline-block;
+//     color: black;
+//     // cursor: pointer;
+//     cursor: url('../../images/4.png');
+//   }
+    
+//     .crossout:hover::after {
+//       content: '';
+//       position: absolute;
+//       top: 50%;
+//       left: 0;
+//       right: 0;
+//       border-bottom: 2px solid red; /* Puedes ajustar el color y el grosor del tachado aquí */
+//       transform: translateY(50%);
+//       transition: transform 0.3s;
+//     }
+    
+//     .crossout:hover::before {
+//       content: '';
+//       position: absolute;
+//       top: 50%;
+//       left: 0;
+//       right: 0;
+//       border-bottom: 2px solid red; /* Puedes ajustar el color y el grosor del tachado aquí */
+//       transform: translateY(-50%);
+//       transition: transform 0.3s;
+//     }

@@ -1,18 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CharacterDetail from './CharactersDetail';
+import '../styles/layouts/fiveItem.scss'
+import '../styles/core/reset.scss'
 
 function FiveItem ({character}){
+  
 
     return (
     <>
+    
     <article className='article'>
-
-        <h1> {character.name} </h1>
-        <img  className='img'
+  
+  <span className='span'> {character.alias} </span>
+        {/* <img  className='img'
         src={character.image}  
          alt= {character.name}
-         title= {character.name} />
+         title= {character.name} /> */}
+      
+         
         
            
 
@@ -29,3 +35,5 @@ function FiveItem ({character}){
 }
 
 export default FiveItem;
+
+

@@ -1,0 +1,66 @@
+
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+}
+.img  {
+    height: 75px;
+    
+}
+.span {
+  text-decoration: none;
+  color: black;
+  &:hover::after {
+    content: '';  // Agrega el contenido del pseudoelemento si es necesario
+    color: black;
+    /* Otros estilos para ::after al pasar el ratón */
+  }
+
+  &:hover::before {
+    content: '';  // Agrega el contenido del pseudoelemento si es necesario
+    color: red;
+    /* Otros estilos para ::before al pasar el ratón */
+  }
+}
+
+
+// .name {
+//    text-decoration: none;
+//     color: black;
+    
+
+// }
+
+// .name {
+//   position: relative;
+//   display: inline-block;
+//   color: black;
+//   // cursor: pointer;
+//   cursor: url('../../images/3.png'), auto;
+// }
+  
+//   .crossout:hover::after {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     right: 0;
+//     border-bottom: 2px solid red; /* Puedes ajustar el color y el grosor del tachado aquí */
+//     transform: translateY(50%);
+//     transition: transform 0.3s;
+//   }
+  
+//   .crossout:hover::before {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     right: 0;
+//     border-bottom: 2px solid red; /* Puedes ajustar el color y el grosor del tachado aquí */
+//     transform: translateY(-50%);
+//     transition: transform 0.3s;
+//   }
