@@ -10,7 +10,7 @@ function FiveItem ({character}){
     return (
     <>
     
-    <article className='article'>
+   
   
   <span className='span'> {character.alias} </span>
         {/* <img  className='img'
@@ -25,7 +25,7 @@ function FiveItem ({character}){
 
 
 
-    </article>
+
 
     
     </>

@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FiveItem from './FiveItem';
 import '../styles/layouts/fiveList.scss';
-import '../images/4.png';
+import '../../public/9.png'
+import '../../public/10.png'
 import '../styles/core/reset.scss';
+import "../../public/cuadernoT.png"
+import Landing from './Landing'
 
 function FiveList({ character }) {
   const [crossedOutItems, setCrossedOutItems] = useState([]);
@@ -29,7 +32,7 @@ function FiveList({ character }) {
 
   return (
     <main className='mainList'>
-      <h1>Five List</h1>
+      <h1 className='lisTitle' >Death List Five</h1>
       <ul className='ul'>
         {character
           .filter((char) => char.category === 'five list')
@@ -44,10 +47,26 @@ function FiveList({ character }) {
               <Link className='link' to={`/detail/${character.id}`}>
                 <FiveItem character={character} />
               </Link>
+              
             </li>
           ))}
+          
       </ul>
-      <button onClick={handleReset}>Reset</button>
+      
+      
+    <div>
+    <img className='reset'  src="../../public/9.png" alt=""  
+       onClick={handleReset}
+       />
+        <Link to="/">
+        <img className='rewind'  src="../../public/12.png" alt=""  
+       />
+      </Link>
+    </div>
+       
+       
+     
+      
     </main>
   );
 }
