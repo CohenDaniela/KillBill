@@ -1,36 +1,80 @@
+.header {
+  height: 20vh;
+  background-image: url('../../images/IMG_4632.GIF');
+  background-position: 30%;
+
+}
 
 
 .landingMain {
-    height: 100vh;
-    background-color: #f8c745;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-   
-  
+  height: 80vh;
+  background-color: #f8c745;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+
+
 }
 
-
-
-.landingLinkFive{
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    font-size: 10px;
-}
-
-.landingLinkOthers{
-    text-decoration: none;
-color: black;
-text-transform: uppercase;
-font-size: 10px;
-
-}
 .landingImg {
-    width: 350px;
-  border-radius: 60%;
-  
- 
+  height: 16vh;
+
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+
+  @media (min-width: 768px) {
+    height: 25vh;
   }
+
+  @media screen and (min-width: 1024px) {
+    height: 35vh;
+  }
+
+}
+
+
+.links {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+
+}
+
+.landingLinkFive {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+
+}
+
+.landingLinkOthers {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+
+
+}
+
+
+.titleLanding {
+  font-family: 'Impacted', sans-serif;
+  font-family: 'Impact', sans-serif;
+  font-weight: 100;
+  font-size: 35px;
+
+
+}
+
+.titleLanding:hover {
+  color: #cd0000;
+  transform: scale(1.1);
+
+}

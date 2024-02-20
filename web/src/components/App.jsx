@@ -5,7 +5,7 @@ import { matchPath } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-// import Header from './Header';
+import Header from './Header';
 import callToApi from '../services/api';
 import Landing from './Landing'
 import FiveList from './FiveList';
@@ -74,6 +74,7 @@ function App() {
     <>
       
     <Routes>
+    <Route/>
       <Route
       path='/'
       element= {

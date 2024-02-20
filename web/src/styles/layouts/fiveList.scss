@@ -7,9 +7,13 @@
    justify-content: center;
    align-items: center;
    gap: 20px;
+   overflow: hidden;
+  
+
   
 }
 .lisTitle{
+  margin-top: 25px;
   color: black;
   text-decoration: underline;
   font-family: 'Fasthand', cursive;
@@ -17,10 +21,15 @@ font-family: 'Foldit', sans-serif;
 font-family: 'Gochi Hand', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Patrick Hand SC', cursive;
-// font-family: 'Rajdhani', sans-serif;
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Roboto Mono', monospace;
-// font-family: 'Roboto Slab', serif;
+@media (min-width: 768px) {
+  font-size: 75px;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
 
 
 }
@@ -43,42 +52,62 @@ font-family: 'Patrick Hand SC', cursive;
 .link {
     text-decoration: none;
     
-}
+    color: black;
+  
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Foldit', sans-serif;
+    font-family: 'Gochi Hand', cursive;
+    font-family: 'Patrick Hand SC', cursive;
+    transition: color 0.3s, transform 0.3s;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    
+    }
+    
+    @media screen and (min-width: 1024px) {
+    
+    }
+  
+  }
+  
+  .link:hover {
+    
+    transform: scale(1.2); 
+  }
+    
 
   
 .name {
+
   position: relative;
   display: inline-block;
-  color: black;
+  color: black;  
   font-family: 'Fasthand', cursive;
 font-family: 'Foldit', sans-serif;
 font-family: 'Gochi Hand', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Patrick Hand SC', cursive;
-// font-family: 'Rajdhani', sans-serif;
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Roboto Mono', monospace;
-// font-family: 'Roboto Slab', serif;
-  cursor: url('../../public/10.png') auto;
+@media (min-width: 768px) {
+  font-size: 50px;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+
 }
 .crossout {
   text-decoration: line-through  #cd0000;
- 
-}
-// .crossout::after {
-//   content: '';
-//   position: absolute;
-//   top: 50%;
-//   left: 0;
-//   right: 0;
-//   border-bottom: 2px solid red;
-//   transform: translateY(50%);
-//   transition: transform 0.3s;
-// }
 
-// .crossed {
-//   transform: translateY(0);
-// }
+}
+
+ 
+ 
+
+
+
 
 .reset {
   height: 120px;
@@ -88,37 +117,3 @@ font-family: 'Patrick Hand SC', cursive;
 }
 
 
-
-
-
-
-
-// .name {
-//     position: relative;
-//     display: inline-block;
-//     color: black;
-//     // cursor: pointer;
-//     cursor: url('../../images/4.png');
-//   }
-    
-//     .crossout:hover::after {
-//       content: '';
-//       position: absolute;
-//       top: 50%;
-//       left: 0;
-//       right: 0;
-//       border-bottom: 2px solid red; /* Puedes ajustar el color y el grosor del tachado aquí */
-//       transform: translateY(50%);
-//       transition: transform 0.3s;
-//     }
-    
-//     .crossout:hover::before {
-//       content: '';
-//       position: absolute;
-//       top: 50%;
-//       left: 0;
-//       right: 0;
-//       border-bottom: 2px solid red; /* Puedes ajustar el color y el grosor del tachado aquí */
-//       transform: translateY(-50%);
-//       transition: transform 0.3s;
-//     }

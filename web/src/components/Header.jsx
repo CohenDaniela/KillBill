@@ -1,19 +1,20 @@
 
-// import '../styles/core/reset.scss'
-// import '../styles/layouts/header.scss'
+import '../styles/core/reset.scss'
+import '../styles/layouts/header.scss'
+import image from '../images/1.png'
+import '../images/beatrix.jpg'
 
 
+function Header (){
 
-// function Header (){
+    return (
+        <>
+        <header className="header">
+      {/* <img className='imgHeader' src="../../images/beatrix.jpg" alt="" /> */}
+        </header>
+        </>
+    )
 
-//     return (
-//         <>
-//         <header className="header">
-//   
-//         </header>
-//         </>
-//     )
+};
 
-// };
-
-// export default Header;
+export default Header;

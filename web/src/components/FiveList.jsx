@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import FiveItem from './FiveItem';
 import '../styles/layouts/fiveList.scss';
-import '../../public/9.png'
-import '../../public/10.png'
+// import '../../public/9.png'
+import '../images/9.png'
+import '../images/10.png'
+import '../images/12.png'
+// import '../../public/10.png'
 import '../styles/core/reset.scss';
-import "../../public/cuadernoT.png"
+
 import Landing from './Landing'
 
 function FiveList({ character }) {
@@ -55,11 +58,16 @@ function FiveList({ character }) {
       
       
     <div>
-    <img className='reset'  src="../../public/9.png" alt=""  
+    <img className='reset'  src="../9.png" alt=""  
        onClick={handleReset}
        />
+        {/* <img className='reset'  src="..//images/9.png" alt=""  
+       onClick={handleReset}
+       /> */}
         <Link to="/">
-        <img className='rewind'  src="../../public/12.png" alt=""  
+        {/* <img className='rewind'  src="../../public/12.png" alt=""  
+       /> */}
+        <img className='rewind'  src="../../12.png" alt=""  
        />
       </Link>
     </div>
