@@ -6,6 +6,7 @@ import '../styles/layouts/allCharacters.scss'
 
 
 function Others ({character}) {
+ 
     const renderOthers = 
     character
     // .filter(char =>  char.category === 'others')
@@ -27,9 +28,9 @@ return (
     <main className='allMain' >
         <h1 className='allTitle'>Others Characters</h1>
       
-        <ul className='listAll'></ul>
+        <ul className='listAll'>{renderOthers}</ul>
         
-        <ul> {renderOthers} </ul>
+        {/* <ul> {renderOthers} </ul> */}
        
         <Link to="/">
         <img className='rewind'  src="../../12.png" alt=""  

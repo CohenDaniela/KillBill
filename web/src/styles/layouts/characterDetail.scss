@@ -1,14 +1,21 @@
 .sectionDetail{
     height: 100vh;
-  
     background-color: #f8c745;
-
-    
     display:flex ;
     flex-direction: column;
     align-items: center;
     justify-content:flex-end;
-    gap: 30px
+    gap: 35px;
+
+     @media (min-width: 768px) {
+
+        gap: 25px;
+    
+    }
+    
+    @media screen and (min-width: 1024px) {
+      gap: 50px;
+    }
 }
 .articleDetail{
     height: 50vh;
@@ -19,7 +26,22 @@
    justify-content: center;
    gap: 15px;
    padding: 20px;
-//    border: black solid;
+
+   @media (min-width: 768px) {
+
+      
+    
+      
+    
+   }
+   
+   @media screen and (min-width: 1024px) {
+    gap:30px
+
+  
+   
+   }
+  
 }
 
 .artName{
@@ -28,41 +50,76 @@ height: 50px;
 width: 350px;
 text-align: center;
 background-color: black;
-   font-size: 40px;
-  //       font-family: "Bebas Neue", sans-serif;
-  //       font-weight: 400;
-  //       font-style: normal;
-                             
+   font-size: 40px;                     
   font-family: 'Impacted', sans-serif;
   font-family: 'Impact', sans-serif;
 font-weight:100;
 color: #f8c745;
      
-        
+@media (min-width: 768px) {
+ margin-top: -150px;
+    
+}
+
+@media screen and (min-width: 1024px) {
+
+}      
 }
 
 
 
 .articledata{
-//     font-family: 'Impacted', sans-serif;
-//     font-family: 'Impact', sans-serif;
-//  font-weight: 25;
 
-    
         font-family: "Bebas Neue", sans-serif;
         font-weight: 200;
         font-style: normal;
         color:#f8c745;
         background-color: black;
         padding: 5px;
+        @media (min-width: 768px) {
+            // height: 40px;
+            // width: 340px;
+            //   font-size: 30px; 
+            //   text-align: center;
+             
+            
+        }
+        
+        @media screen and (min-width: 1024px) {
+            font-size: 20px;
+          
+           
+       
+        }    
+        
     
 }
 
 .imgCharacter{
     height: 125px;
+    @media (min-width: 768px) {
+        // height:350px
+         
+        
+    }
+    
+    @media screen and (min-width: 1024px) {
+
+         height:425px
+
+  
+    }    
 }
+
 .infoCharacter{
-    text-align:center
+    text-align:center;
+    @media screen and (min-width: 1024px) {
+display: flex;
+flex-direction: row;
+
+        }   
+        
+        
 
 }
 .infoTxt{
@@ -72,4 +129,16 @@ color: #f8c745;
     font-style: normal;
    
     padding: 5px;
+}
+
+.rewind {
+    
+       
+    @media screen and (min-width: 1024px) {
+
+// height: 250px;
+
+  
+    }   
+   
 }
