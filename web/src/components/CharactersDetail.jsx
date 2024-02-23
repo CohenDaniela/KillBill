@@ -3,22 +3,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../styles/layouts/characterDetail.scss'
 import '../styles/core/reset.scss'
+import { useNavigate } from "react-router-dom";
 
 
 
 const CharacterDetail = ({ characterData }) => {
+  const navigate = useNavigate();
+
   if (!characterData) {
   
     return <p>Cargando...</p>
     
   }
-  let linkTo = "/"; 
-  if (characterData.category === "five list") {
-    linkTo = "/api/fivelist";
-  } else if (characterData.category === "others") {
-    linkTo = "/api/otherslist";
-  } 
-  
+
+  const handleRewindClick = () => {
+   
+    navigate(-1);
+  };
+
   return (
     <>
       <section className="sectionDetail">
@@ -47,10 +49,13 @@ const CharacterDetail = ({ characterData }) => {
          </section>
         </article>
         
-        <Link to={linkTo} >
+        {/* <Link to={linkTo} > */}
         <img className='rewind'  src="../../public/12.png" alt=""  
+           onClick={handleRewindClick}
        />
-      </Link>
+      {/* </Link> */}
+   
+ 
       </section>
     </>
   );

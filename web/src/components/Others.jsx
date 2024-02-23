@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import OthersItem from './OthersItem';
+import FavoritesList from './Favoriteslist';
 import '../styles/core/reset.scss';
 import '../styles/layouts/allCharacters.scss'
 
 
 function Others ({character}) {
- 
+
+    
+    
     const renderOthers = 
     character
     // .filter(char =>  char.category === 'others')
@@ -26,7 +29,7 @@ function Others ({character}) {
 
 return (
     <main className='allMain' >
-        <h1 className='allTitle'>Others Characters</h1>
+        <h1 className='allTitle'> All the Characters</h1>
       
         <ul className='listAll'>{renderOthers}</ul>
         
@@ -36,6 +39,7 @@ return (
         <img className='rewind'  src="../../12.png" alt=""  
        />
       </Link>
+ 
     </main>
     
 )
