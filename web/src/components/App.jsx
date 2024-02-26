@@ -4,7 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { matchPath } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-
+import { get, set, remove, clear } from '../services/LocalStorage.jsx';
 import Header from './Header';
 import callToApi from '../services/api';
 import Landing from './Landing'
@@ -12,16 +12,15 @@ import FiveList from './FiveList';
 import Others from './Others';
 import CharacterDetail from './CharactersDetail';
 import "../styles/App.scss";
-
-
-
+import FavoritesList from './Favoriteslist';
 
 
 
 function App() {
   const [character, setCharacter] = useState([])
-  const [fiveCharacters, setFiveCharacters]= useState ([])
-  const [otheRChar, setOtherChar] = useState([])
+  // const [fiveCharacters, setFiveCharacters]= useState ([])
+  // const [otheRChar, setOtherChar] = useState([])
+  const [favorites, setFavorites] = useState(get('favorites', []));
 
 
   useEffect(() => {
@@ -36,16 +35,7 @@ function App() {
           console.error('Error fetching data for character:', resultCharacter);
         }
 
-        // Llamada al segundo endpoint
-        // const resultIdCharacters = await callToApi('http://localhost:3001/api/:id');
-        // if (Array.isArray(resultIdCharacters)) {
-        //   setFiveCharacters(resultIdCharacters);
-        //   console.log('fiveCharacters:', resultiDCharacters);
-        // } else {
-        //   console.error('Error fetching data for fiveCharacters:', resultidCharacters);
-        // }
-
-        // Llamada al tercer endpoint
+      
        
 
       } catch (error) {
@@ -53,9 +43,7 @@ function App() {
       }
     };
 
-    fetchData(); // Llamamos a la función fetchData que contiene las llamadas a la API
-
-    // Dependencia vacía para que el useEffect se ejecute solo una vez al montar el componente
+    fetchData(); 
   }, []);
   
   const { pathname } = useLocation();
@@ -66,8 +54,32 @@ function App() {
   
   // ///buscar personaje por id
   const characterData = character.find((item) => item.id === charId);
+  
+ ///funcion favorites
+
+
+ const toggleFavorite = (id) => {
+  setFavorites((favorites) => {
+    const updatedFavorites = favorites.includes(id)
+      ? favorites.filter((favoriteId) => favoriteId !== id)
+      : [...favorites, id];
+
+    // Guarda los favoritos en localStorage
+    set('favorites', updatedFavorites);
+
+    return updatedFavorites;
+  });
+};
  
-   
+  // const toggleFavorite = (id) => {
+  //   setFavorites((favorites) => {
+  //     if (favorites.includes(id)) {
+  //       return favorites.filter((favoriteId) => favoriteId !== id);
+  //     } else {
+  //       return [...favorites, id];
+  //     }
+  //   });
+  // };
 
 
   return (
@@ -101,6 +113,9 @@ function App() {
       element= {
         <Others
         character= {character}
+        favorites={favorites}
+        toggleFavorite={toggleFavorite}
+
         
         />
         
@@ -117,6 +132,19 @@ function App() {
      {console.log("characterData in App.js:", characterData)}
      {console.log("charId:", charId)}
       <CharacterDetail characterData={characterData} />
+    </>
+  }
+/>
+
+
+<Route
+  path='/favorites'
+  element={
+    <>
+  
+      <FavoritesList 
+      character={character}
+      favorites={favorites} />
     </>
   }
 />

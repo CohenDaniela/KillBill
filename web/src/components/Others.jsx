@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { get, set, remove, clear } from '../services/LocalStorage.jsx';
 import OthersItem from './OthersItem';
 import FavoritesList from './Favoriteslist';
 import '../styles/core/reset.scss';
 import '../styles/layouts/allCharacters.scss'
 
 
-function Others ({character}) {
+function Others ({character, favorites, toggleFavorite}) {
 
     
     
@@ -21,6 +22,9 @@ function Others ({character}) {
                <OthersItem
                 character={character}  />
                </Link>
+               <button onClick={() => toggleFavorite(character.id)}>
+        {favorites.includes(character.id) ? 'Quitar de favoritos' : 'Marcar como Favorito'}
+      </button>
             </li>
             
         );
@@ -33,7 +37,12 @@ return (
       
         <ul className='listAll'>{renderOthers}</ul>
         
-        {/* <ul> {renderOthers} </ul> */}
+ <Link to={'/favorites'}
+ 
+ >
+
+  favorites
+ </Link>
        
         <Link to="/">
         <img className='rewind'  src="../../12.png" alt=""  

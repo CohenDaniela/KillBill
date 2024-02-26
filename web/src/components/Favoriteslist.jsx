@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import OthersItem from './OthersItem.jsx';
 import { get, set, remove, clear } from '../services/LocalStorage.jsx';
 
 function FavoritesList({ favorites, character }) {
@@ -6,7 +8,12 @@ function FavoritesList({ favorites, character }) {
     .filter((character) => favorites.includes(character.id))
     .map((character) => (
       <li key={character.id}>
-        <p>{character.name}</p>
+          <Link className='allLink' to={`/detail/${character.id}`} >
+               <OthersItem
+                character={character}  />
+               </Link>
+
+
       </li>
     ));
 
