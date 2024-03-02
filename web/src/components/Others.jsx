@@ -7,7 +7,7 @@ import '../styles/core/reset.scss';
 import '../styles/layouts/allCharacters.scss'
 
 
-function Others ({character, favorites, toggleFavorite}) {
+function Others ({character, favorites, toggleFavorite, resetFavorites}) {
 
     
     
@@ -22,9 +22,30 @@ function Others ({character, favorites, toggleFavorite}) {
                <OthersItem
                 character={character}  />
                </Link>
-               <button onClick={() => toggleFavorite(character.id)}>
-        {favorites.includes(character.id) ? 'Quitar de favoritos' : 'Marcar como Favorito'}
-      </button>
+               <button
+  className={`btnToggleFav ${favorites.includes(character.id) ? 'inFavorites' : 'notInFavorites'}`}
+  onClick={() => toggleFavorite(character.id)}
+>
+  {favorites.includes(character.id) ? (
+    <>
+     
+      <span role="img" aria-label="heart" className="heartIcon">&#10084;</span>
+    </>
+  ) : (
+    <>
+     
+      <span role="img" aria-label="heart" className="heartIcon">&#10084;</span>
+    </>
+  )}
+</button>
+
+               {/* <button
+  className={`btnToggleFav ${favorites.includes(character.id) ? 'inFavorites' : 'notInFavorites'}`}
+  onClick={() => toggleFavorite(character.id)}
+>
+  {favorites.includes(character.id) ? 'Remove from favorites ' : 'Add to Favorites'}
+</button> */}
+      
             </li>
             
         );
@@ -37,7 +58,11 @@ return (
       
         <ul className='listAll'>{renderOthers}</ul>
         
- <Link to={'/favorites'}
+<div className='divBtns'>
+<img className='reset'  src="../9.png" alt=""  
+       onClick={resetFavorites}/>
+  
+<Link className='linktofav' to={'/favorites'}
  
  >
 
@@ -48,6 +73,7 @@ return (
         <img className='rewind'  src="../../12.png" alt=""  
        />
       </Link>
+</div>
  
     </main>
     

@@ -9,6 +9,7 @@ import '../styles/layouts/fiveList.scss';
 import '../images/9.png'
 import '../images/10.png'
 import '../images/12.png'
+
 // import '../../public/10.png'
 import '../styles/core/reset.scss';
 
@@ -44,11 +45,7 @@ function FiveList({ character }) {
     setCrossedOutItems([]);
     remove('crossedOutItems');
   };
-  // // useEffect(() => {
-  // //   return () => {
-  // //     clear();
-  // //   };
-  // }, []);
+
 
   return (
     <main className='mainList'>
@@ -74,7 +71,7 @@ function FiveList({ character }) {
       </ul>
       
       
-    <div>
+    <div className='divLinks'>
     <img className='reset'  src="../9.png" alt=""  
        onClick={handleReset}
        />
@@ -87,8 +84,7 @@ function FiveList({ character }) {
      
 
     </div>
-       
-       
+
      
       
     </main>

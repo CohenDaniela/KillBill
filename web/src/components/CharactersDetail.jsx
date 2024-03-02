@@ -3,12 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../styles/layouts/characterDetail.scss'
 import '../styles/core/reset.scss'
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
 
-const CharacterDetail = ({ characterData }) => {
-  const navigate = useNavigate();
+const CharacterDetail = ({ characterData,handleRewindClick }) => {
+  // const navigate = useNavigate();
 
   if (!characterData) {
   
@@ -16,10 +16,10 @@ const CharacterDetail = ({ characterData }) => {
     
   }
 
-  const handleRewindClick = () => {
+  // const handleRewindClick = () => {
    
-    navigate(-1);
-  };
+  //   navigate(-1);
+  // };
 
   return (
     <>
@@ -44,16 +44,16 @@ const CharacterDetail = ({ characterData }) => {
           <h4 className="articledata age" >{characterData.age} </h4>
          <span className="infoTxt"> Place of Birth  </span>
           <h4 className="articledata country" > {characterData.country} </h4>
-
+         
         
          </section>
         </article>
         
-        {/* <Link to={linkTo} > */}
-        <img className='rewind'  src="../../public/12.png" alt=""  
+    
+      
+        <img className='rewind'  src="../12.png" alt=""  
            onClick={handleRewindClick}
        />
-      {/* </Link> */}
    
  
       </section>

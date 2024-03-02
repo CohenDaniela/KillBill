@@ -6,7 +6,8 @@
     @media screen and (min-width: 1024px) {
        height: 100vh;
        justify-content: center;
-       gap:40px
+       gap:40px;
+       overflow: hidden;
       }
 
 }
@@ -17,6 +18,7 @@
     font-family: 'Impacted', sans-serif;
     font-family: 'Impact', sans-serif;
     font-weight: 100;
+    margin-top: 10px;
     @media screen and (min-width: 1024px) {
        font-size: 60px;
        }
@@ -28,7 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     
    
      
@@ -60,3 +62,74 @@
   
       }
 }
+
+.btnToggleFav{
+    // background-color: black;
+    // // color:#f8c745;
+    // border-radius: 10px;
+    // padding: 5px;
+    // font-family: "Bebas Neue", sans-serif;
+    // border:solid black;
+text-decoration: none;
+background-color: #f8c745;
+border: none;
+
+   
+}
+.btnToggleFav:hover {
+    transform: scale(1.2); 
+// background-color: #cd0000;
+}
+.heartIcon{
+   background-color: black;
+   border-radius: 60px;
+ font-size: 15px;
+ padding: 6px;
+}
+
+// .inFavorites {
+  
+//     background-color: #f8c745;
+//     color:black;
+//     border : solid black;
+ 
+
+//   }
+  
+//   .notInFavorites {
+//     background-color:  /* Cambia a tu color favorito cuando no está en favoritos */
+//     color: blanco; /* Cambia a tu color favorito para el texto */
+//   }
+
+.linktofav{
+    text-decoration: none;
+  
+  background-color: #f8c745;;
+  
+    padding: 15px;
+    font-family: "Bebas Neue", sans-serif;
+    color: black;
+    font-size: 30px;
+}
+.linktofav:hover{
+    color:  #cd0000;
+}
+.divBtns{
+    margin-bottom: 10px;
+   pad: 5px;
+    display: flex;
+    flex-direction: row
+    ;
+    align-items: center;
+    gap: 10px;
+}
+.inFavorites {
+    color:#cd0000; /* Cambia el color cuando está en favoritos */
+  }
+  
+  .notInFavorites {
+    color:#f8c745;
+    
+     /* Cambia el color cuando no está en favoritos */
+  }
+  

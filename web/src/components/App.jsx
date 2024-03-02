@@ -5,6 +5,7 @@ import { matchPath } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { get, set, remove, clear } from '../services/LocalStorage.jsx';
+import { useNavigate } from "react-router-dom";
 import Header from './Header';
 import callToApi from '../services/api';
 import Landing from './Landing'
@@ -21,6 +22,7 @@ function App() {
   // const [fiveCharacters, setFiveCharacters]= useState ([])
   // const [otheRChar, setOtherChar] = useState([])
   const [favorites, setFavorites] = useState(get('favorites', []));
+    const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -70,7 +72,51 @@ function App() {
     return updatedFavorites;
   });
 };
- 
+const removeSingleFavorite = (event, id) => {
+  event.preventDefault();
+  setFavorites((favorites) => {
+    const updatedFavorites = favorites.filter((favoriteId) => favoriteId !== id);
+
+    // Guarda los favoritos actualizados en localStorage
+    set('favorites', updatedFavorites);
+
+    return updatedFavorites;
+  });
+};
+
+// Función para eliminar todos los elementos de favorites
+// const resetFavorites = () => {
+//   setFavorites(() => {
+//     // Elimina la clave 'favorites' del localStorage
+//     localStorage.removeItem('favorites');
+//     // Retorna un nuevo array vacío como nuevo estado
+//     return [];
+//   });
+// };
+
+// Función para eliminar un elemento específico de favorites por ID
+
+
+
+const resetFavorites = (id) => {
+  setFavorites((favorites) => {
+    const removeFavorites = favorites = ('')
+    remove('favorites', removeFavorites);
+
+    return removeFavorites;
+  });
+};
+
+
+ ///funcion boton rewind navegar hacia atras
+
+  const handleRewindClick = () => {
+   
+    navigate(-1);
+  };
+
+
+
   // const toggleFavorite = (id) => {
   //   setFavorites((favorites) => {
   //     if (favorites.includes(id)) {
@@ -115,6 +161,7 @@ function App() {
         character= {character}
         favorites={favorites}
         toggleFavorite={toggleFavorite}
+        resetFavorites={resetFavorites}
 
         
         />
@@ -131,7 +178,8 @@ function App() {
     <>
      {console.log("characterData in App.js:", characterData)}
      {console.log("charId:", charId)}
-      <CharacterDetail characterData={characterData} />
+      <CharacterDetail characterData={characterData}
+      handleRewindClick={handleRewindClick} />
     </>
   }
 />
@@ -144,7 +192,15 @@ function App() {
   
       <FavoritesList 
       character={character}
-      favorites={favorites} />
+      favorites={favorites}
+      handleRewindClick={handleRewindClick}
+      resetFavorites={resetFavorites}
+      toggleFavorite={toggleFavorite}
+      removeSingleFavorite={ removeSingleFavorite}
+    
+    
+      
+      />
     </>
   }
 />
