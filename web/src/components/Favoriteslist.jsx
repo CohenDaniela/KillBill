@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import OthersItem from './OthersItem.jsx';
 import '../styles/layouts/favoritesList.scss'
+import '../styles/core/reset.scss'
 import { get, set, remove, clear } from '../services/LocalStorage.jsx';
 
 function FavoritesList({ favorites, character, handleRewindClick, resetFavorites, removeSingleFavorite }) {
@@ -17,10 +18,11 @@ function FavoritesList({ favorites, character, handleRewindClick, resetFavorites
             character={character} />
         </Link>
         <button
+        
   className='resetButton'
   onClick={(event) => removeSingleFavorite(event, character.id)}  
->
-  Reset
+><span role="img" aria-label="delete" className="deleteIcon">&#10060;</span>
+ 
 </button>
 
       </li>

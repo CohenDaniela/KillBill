@@ -3,12 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @media screen and (min-width: 1024px) {
-       height: 100vh;
-       justify-content: center;
-       gap:40px;
-       overflow: hidden;
-      }
+        height: 100vh;
+        justify-content: center;
+        gap: 25px;
+        overflow: hidden;
+    }
 
 }
 
@@ -19,9 +20,10 @@
     font-family: 'Impact', sans-serif;
     font-weight: 100;
     margin-top: 10px;
+
     @media screen and (min-width: 1024px) {
-       font-size: 60px;
-       }
+        font-size: 60px;
+    }
 }
 
 
@@ -31,10 +33,10 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    
-   
-     
-    
+
+
+
+
 
 }
 
@@ -50,86 +52,86 @@
     padding: 5px;
 
 }
-.listAll{
+
+.listAll {
     @media screen and (min-width: 1024px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+}
+
+.btnToggleFav {
   
-      }
-}
-
-.btnToggleFav{
-    // background-color: black;
-    // // color:#f8c745;
-    // border-radius: 10px;
-    // padding: 5px;
-    // font-family: "Bebas Neue", sans-serif;
-    // border:solid black;
-text-decoration: none;
-background-color: #f8c745;
-border: none;
-
-   
-}
-.btnToggleFav:hover {
-    transform: scale(1.2); 
-// background-color: #cd0000;
-}
-.heartIcon{
-   background-color: black;
-   border-radius: 60px;
- font-size: 15px;
- padding: 6px;
-}
-
-// .inFavorites {
-  
-//     background-color: #f8c745;
-//     color:black;
-//     border : solid black;
- 
-
-//   }
-  
-//   .notInFavorites {
-//     background-color:  /* Cambia a tu color favorito cuando no está en favoritos */
-//     color: blanco; /* Cambia a tu color favorito para el texto */
-//   }
-
-.linktofav{
     text-decoration: none;
+    background-color: #f8c745;
+    border: none;
   
-  background-color: #f8c745;;
-  
-    padding: 15px;
+
+
+}
+
+.btnToggleFav:hover {
+    transform: scale(1.2);
+}
+
+.heartIcon {
+    background-color: black;
+    border-radius: 60px;
+    font-size: 15px;
+    padding: 6px;
+}
+
+.linktofav {
+    text-decoration: none;
+
+    background-color: #f8c745;
+    ;
+
+
     font-family: "Bebas Neue", sans-serif;
     color: black;
     font-size: 30px;
 }
-.linktofav:hover{
-    color:  #cd0000;
+
+.linktofav:hover {
+    color: #cd0000;
 }
-.divBtns{
+
+.divBtns {
     margin-bottom: 10px;
-   pad: 5px;
+    pad: 5px;
     display: flex;
-    flex-direction: row
-    ;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-}
-.inFavorites {
-    color:#cd0000; /* Cambia el color cuando está en favoritos */
-  }
-  
-  .notInFavorites {
-    color:#f8c745;
+    justify-content: center;
+    gap: 6px;
+    @media (min-width: 768px) {
     
-     /* Cambia el color cuando no está en favoritos */
-  }
+        
+        
+    }
+    
+    @media screen and (min-width: 1024px) {
+
+         flex-direction: row;
+
   
+    }    
+}
+
+.inFavorites {
+    color: #cd0000;
+    /* Cambia el color cuando está en favoritos */
+}
+
+.notInFavorites {
+    color: #f8c745;
+
+    /* Cambia el color cuando no está en favoritos */
+}

@@ -1,28 +1,19 @@
-import React, { useState,useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { get, set, remove, clear } from '../services/LocalStorage.jsx';
-
 import FiveItem from './FiveItem';
 import '../styles/layouts/fiveList.scss';
-// import '../../public/9.png'
 import '../images/9.png'
 import '../images/10.png'
 import '../images/12.png'
-
-// import '../../public/10.png'
 import '../styles/core/reset.scss';
 
-
-import Landing from './Landing'
 
 function FiveList({ character }) {
 
   const [crossedOutItems, setCrossedOutItems] = useState(() => {
-    // Recupera los elementos cruzados desde el localStorage al inicio
     return get('crossedOutItems', []);
   });
-
 
 
   const handleClick = (index) => {
@@ -41,7 +32,6 @@ function FiveList({ character }) {
     });
   };
   const handleReset = () => {
-    // Restablecer el estado crossedOutItems a un array vacío
     setCrossedOutItems([]);
     remove('crossedOutItems');
   };
@@ -58,35 +48,31 @@ function FiveList({ character }) {
               <h1
                 onClick={() => handleClick(index)}
                 className={`name ${crossedOutItems.includes(index) ? 'crossout' : ''}`}
+
+                
               >
                 {character.name}
               </h1>
               <Link className='link' to={`/detail/${character.id}`}>
                 <FiveItem character={character} />
               </Link>
-              
+
             </li>
           ))}
-          
+
       </ul>
-      
-      
-    <div className='divLinks'>
-    <img className='reset'  src="../9.png" alt=""  
-       onClick={handleReset}
-       />
-      
+      <div className='divLinks'>
+        <img className='reset' src="../9.png" alt=""
+          onClick={handleReset}
+        />
+
         <Link to="/">
-      
-        <img className='rewind'  src="../../12.png" alt=""  
-       />
-      </Link>
-     
 
-    </div>
+          <img className='rewind' src="../../12.png" alt=""
+          />
+        </Link>
 
-     
-      
+      </div>
     </main>
   );
 }

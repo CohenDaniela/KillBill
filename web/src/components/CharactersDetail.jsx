@@ -51,7 +51,7 @@ const CharacterDetail = ({ characterData,handleRewindClick }) => {
         
     
       
-        <img className='rewind'  src="../12.png" alt=""  
+        <img className='rewindDetail'  src="../12.png" alt=""  
            onClick={handleRewindClick}
        />
    

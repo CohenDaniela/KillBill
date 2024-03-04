@@ -1,19 +1,22 @@
 
 .mainFavorites {
     background-color: #f8c745;
+   overflow-x: hidden;
     height: 100vh;
-   
-    background-color: #f8c745;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and (min-width: 1024px){
+        height: 100vh;
+    }
    
 }
 
 
 .favoritesSection {
-   
+//    height: 100vh;
+   width: 100vw;
     background-color: #f8c745;
     display: flex;
     flex-direction: column;
@@ -58,8 +61,23 @@
 }
 
 .favoritesTitle {
+    margin-top: 10px;
     text-transform: uppercase;
     padding: 20px;
     font-family: 'Impact', sans-serif;
     font-weight: 100;
+    @media screen and (min-width: 1024px){
+      font-size: 40px;
+    }
+}
+.resetButton{
+    text-decoration: none;
+    background-color: black;
+    border: solid black;
+    margin-top: 3px;
+}
+.deleteIcon{
+    background-color: black;
+    border: solid black;
+    
 }
