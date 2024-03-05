@@ -17,8 +17,4 @@ const callToApi = () => {
 };
 
 
-
-
-
-
 export default callToApi;

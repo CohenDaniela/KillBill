@@ -7,7 +7,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require("bcrypt");
 
 
-
 ///crear servidor
 const app = express();
 
@@ -57,7 +56,7 @@ app.get("/api/KillBill", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   } finally {
     if (conn) {
-      conn.end(); // Cierra la conexión a la base de datos en el bloque finally
+      conn.end(); // Cierra la conexión a la base de datos ∫
     }
   }
 });
@@ -78,12 +77,10 @@ app.get("/api/fivelist", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   } finally {
     if (conn) {
-      conn.end(); // Cierra la conexión a la base de datos en el bloque finally
+      conn.end();
     }
   }
 });
-
-
 
 
 
@@ -92,7 +89,7 @@ app.get('/api/:id', async (req, res) => {
   ///get id by params
   const id = req.params.id;
   //Query
-  const queryCharacter= "SELECT * FROM death_list_five WHERE id_character = ?";
+  const queryCharacter = "SELECT * FROM death_list_five WHERE id_character = ?";
   //getConnection
   const conn = await getConnection();
   //Execute query

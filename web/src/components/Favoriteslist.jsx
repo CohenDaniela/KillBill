@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import OthersItem from './OthersItem.jsx';
+import AllItems from './AllItems.jsx';
 import '../styles/layouts/favoritesList.scss'
 import '../styles/core/reset.scss'
-import { get, set, remove, clear } from '../services/LocalStorage.jsx';
+
+
 
 function FavoritesList({ favorites, character, handleRewindClick, resetFavorites, removeSingleFavorite }) {
   
@@ -14,7 +15,7 @@ function FavoritesList({ favorites, character, handleRewindClick, resetFavorites
       <li className='liFavorites' key={character.id}>
 
         <Link className='linkFavorites' to={`/detail/${character.id}`} >
-          <OthersItem
+          <AllItems
             character={character} />
         </Link>
         <button

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { get, set, remove, clear } from '../services/LocalStorage.jsx';
 import FiveItem from './FiveItem';
@@ -49,7 +49,7 @@ function FiveList({ character }) {
                 onClick={() => handleClick(index)}
                 className={`name ${crossedOutItems.includes(index) ? 'crossout' : ''}`}
 
-                
+
               >
                 {character.name}
               </h1>

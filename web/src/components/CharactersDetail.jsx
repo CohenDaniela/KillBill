@@ -1,25 +1,21 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
 import '../styles/layouts/characterDetail.scss'
 import '../styles/core/reset.scss'
-// import { useNavigate } from "react-router-dom";
 
 
 
-const CharacterDetail = ({ characterData,handleRewindClick }) => {
-  // const navigate = useNavigate();
+
+const CharacterDetail = ({ characterData, handleRewindClick }) => {
+
 
   if (!characterData) {
-  
+
     return <p>Cargando...</p>
-    
+
   }
 
-  // const handleRewindClick = () => {
-   
-  //   navigate(-1);
-  // };
+
 
   return (
     <>
@@ -33,29 +29,29 @@ const CharacterDetail = ({ characterData,handleRewindClick }) => {
             alt={characterData.name}
             title={characterData.name}
           />
-         <section className="infoCharacter">
-         <span className="infoTxt"> Ocupattion</span>
-          <h3 className="articledata ocupattion" > {characterData.occupation} </h3>
-         <span className="infoTxt"> Weapons</span>
-          <h3 className="articledata weapons" >  {characterData.weapons} </h3>
-          <span className="infoTxt">Affiliation</span>
-          <h3 className="articledata affiliation" > {characterData.affiliation} </h3>
-        <span className="infoTxt">  Age </span>
-          <h4 className="articledata age" >{characterData.age} </h4>
-         <span className="infoTxt"> Place of Birth  </span>
-          <h4 className="articledata country" > {characterData.country} </h4>
-         
-        
-         </section>
+          <section className="infoCharacter">
+            <span className="infoTxt"> Ocupattion</span>
+            <h3 className="articledata ocupattion" > {characterData.occupation} </h3>
+            <span className="infoTxt"> Weapons</span>
+            <h3 className="articledata weapons" >  {characterData.weapons} </h3>
+            <span className="infoTxt">Affiliation</span>
+            <h3 className="articledata affiliation" > {characterData.affiliation} </h3>
+            <span className="infoTxt">  Age </span>
+            <h4 className="articledata age" >{characterData.age} </h4>
+            <span className="infoTxt"> Place of Birth  </span>
+            <h4 className="articledata country" > {characterData.country} </h4>
+
+
+          </section>
         </article>
-        
-    
-      
-        <img className='rewindDetail'  src="../12.png" alt=""  
-           onClick={handleRewindClick}
-       />
-   
- 
+
+
+
+        <img className='rewindDetail' src="../12.png" alt=""
+          onClick={handleRewindClick}
+        />
+
+
       </section>
     </>
   );
