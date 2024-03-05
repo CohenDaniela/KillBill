@@ -3,8 +3,7 @@ import { useEffect } from 'react'
 import { Route, Routes } from "react-router-dom";
 import { matchPath } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import { get, set, remove, clear } from '../services/LocalStorage.jsx';
+import { get, set, remove } from '../services/LocalStorage.jsx';
 import { useNavigate } from "react-router-dom";
 import callToApi from '../services/api';
 import Landing from './Landing'
