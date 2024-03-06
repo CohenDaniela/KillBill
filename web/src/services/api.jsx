@@ -1,6 +1,6 @@
 
 const callToApi = () => {
-  return fetch("http://localhost:3001/api/killbill")
+  return fetch("https://killbill-bqhs.onrender.com/")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
