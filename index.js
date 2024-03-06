@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 require("dotenv").config();
-
+const path = require('path');
 
 
 ///crear servidor
@@ -109,6 +109,10 @@ app.get('/api/:id', async (req, res) => {
   res.json(result);
 })
 
+app.use((req, res, next) => {
+  // Redirigir todas las rutas no coincidentes al frontend
+  res.redirect('https://cohendaniela.github.io/KillBill/' + req.path);
+});
 
 const staticServerPath = './public-html';
 app.use(express.static(staticServerPath));
