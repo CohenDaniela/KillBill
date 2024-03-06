@@ -16,6 +16,7 @@ app.use(express.json({ limit: "25mb" }));
 ///iniciar el servidor
 
 const port = 3001
+
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
