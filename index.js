@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 require("dotenv").config();
-const path = require('path');
+// const path = require('path');
 
 
 ///crear servidor
@@ -44,7 +44,7 @@ async function getConnection() {
 app.get("/api/KillBill", async (req, res) => {
   try {
     const conn = await getConnection();
-    const queryAll = "SELECT * FROM KillBill.characters";
+    const queryAll = "SELECT * FROM freedb_KillBill.characters;";
     const [results, fields] = await conn.query(queryAll);
 
     console.log(fields);
@@ -65,7 +65,7 @@ app.get("/api/KillBill", async (req, res) => {
 app.get("/api/fivelist", async (req, res) => {
   try {
     const conn = await getConnection();
-    const querylistFive = "SELECT * FROM KillBill.characters WHERE category = 'five list'";
+    const querylistFive = "SELECT * FROM freedb_KillBill.characters WHERE category = 'five list'";
     const [results, fields] = await conn.query(querylistFive);
 
     console.log(fields);
@@ -85,34 +85,34 @@ app.get("/api/fivelist", async (req, res) => {
 
 
 
-app.get('/api/:id', async (req, res) => {
-  ///get id by params
-  const id = req.params.id;
-  //Query
-  const queryCharacter = "SELECT * FROM death_list_five WHERE id_character = ?";
-  //getConnection
-  const conn = await getConnection();
-  //Execute query
-  const [result] = await conn.query(queryCharacter, id);
-  //End connection
-  conn.end();
-  //response when the id doesn´t exist in the DB
-  const numOfElements = result.length;
-  if (numOfElements === 0) {
-    res.json({
-      success: true,
-      message: "Ooops...",
-    });
-    return;
-  }
-  //response
-  res.json(result);
-})
+// app.get('/api/:id', async (req, res) => {
+//   ///get id by params
+//   const id = req.params.id;
+//   //Query
+//   const queryCharacter = "SELECT * FROM death_list_five WHERE id_character = ?";
+//   //getConnection
+//   const conn = await getConnection();
+//   //Execute query
+//   const [result] = await conn.query(queryCharacter, id);
+//   //End connection
+//   conn.end();
+//   //response when the id doesn´t exist in the DB
+//   const numOfElements = result.length;
+//   if (numOfElements === 0) {
+//     res.json({
+//       success: true,
+//       message: "Ooops...",
+//     });
+//     return;
+//   }
+//   //response
+//   res.json(result);
+// })
 
-app.use((req, res, next) => {
-  // Redirigir todas las rutas no coincidentes al frontend
-  res.redirect('https://cohendaniela.github.io/KillBill/' + req.path);
-});
+// app.use((req, res, next) => {
+//   // Redirigir todas las rutas no coincidentes al frontend
+//   res.redirect('https://cohendaniela.github.io/KillBill/' + req.path);
+// });
 
 const staticServerPath = './public-html';
 app.use(express.static(staticServerPath));
