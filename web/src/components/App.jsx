@@ -20,25 +20,25 @@ function App() {
   const [favorites, setFavorites] = useState(get('favorites', []));
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resultCharacter = await callToApi('http://localhost:3001/api/killbill');
+        const resultCharacter = await callToApi();
         if (Array.isArray(resultCharacter)) {
           setCharacter(resultCharacter);
           console.log('character:', resultCharacter);
         } else {
           console.error('Error fetching data for character:', resultCharacter);
         }
-
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-
+  
     fetchData();
   }, []);
+  
+
 
   const { pathname } = useLocation();
   const routeData = matchPath('/detail/:id', pathname);
