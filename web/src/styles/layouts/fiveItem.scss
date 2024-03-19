@@ -1,21 +1,19 @@
 .img {
   height: 75px;
-
 }
 
 .span {
   text-decoration: none;
   color: black;
 
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Foldit', sans-serif;
-  font-family: 'Gochi Hand', cursive;
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Foldit", sans-serif;
+  font-family: "Gochi Hand", cursive;
+  font-family: "Patrick Hand SC", cursive;
   transition: color 0.3s, transform 0.3s;
-
 }
 
 .span:hover {
-  color:  #cd0000; 
-  transform: scale(1.1); 
+  color: #cd0000;
+  transform: scale(1.1);
 }

@@ -1,136 +1,112 @@
 .allMain {
-    background-color: #f8c745;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #f8c745;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    @media screen and (min-width: 1024px) {
-        height: 100vh;
-        justify-content: center;
-        gap: 25px;
-        overflow: hidden;
-    }
-
+  @media screen and (min-width: 1024px) {
+    height: 100vh;
+    justify-content: center;
+    gap: 25px;
+    overflow: hidden;
+  }
 }
 
 .allTitle {
-    text-transform: uppercase;
-    padding: 20px;
-    font-family: 'Impacted', sans-serif;
-    font-family: 'Impact', sans-serif;
-    font-weight: 100;
-    margin-top: 10px;
+  text-transform: uppercase;
+  padding: 20px;
+  font-family: "Impacted", sans-serif;
+  font-family: "Impact", sans-serif;
+  font-weight: 100;
+  margin-top: 10px;
 
-    @media screen and (min-width: 1024px) {
-        font-size: 60px;
-    }
+  @media screen and (min-width: 1024px) {
+    font-size: 60px;
+  }
 }
 
-
 .li {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-
-
-
-
-
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .allLink {
-    text-decoration: none;
-    color: #f8c745;
+  text-decoration: none;
+  color: #f8c745;
 
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    color: #f8c745;
-    background-color: black;
-    padding: 5px;
-
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #f8c745;
+  background-color: black;
+  padding: 5px;
 }
 
 .listAll {
-    @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-
-    }
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 .btnToggleFav {
-  
-    text-decoration: none;
-    background-color: #f8c745;
-    border: none;
-  
-
-
+  text-decoration: none;
+  background-color: #f8c745;
+  border: none;
 }
 
 .btnToggleFav:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .heartIcon {
-    background-color: black;
-    border-radius: 60px;
-    font-size: 15px;
-    padding: 6px;
+  background-color: black;
+  border-radius: 60px;
+  font-size: 15px;
+  padding: 6px;
 }
 
 .linktofav {
-    text-decoration: none;
+  text-decoration: none;
 
-    background-color: #f8c745;
-    ;
-
-
-    font-family: "Bebas Neue", sans-serif;
-    color: black;
-    font-size: 30px;
+  background-color: #f8c745;
+  font-family: "Bebas Neue", sans-serif;
+  color: black;
+  font-size: 30px;
 }
 
 .linktofav:hover {
-    color: #cd0000;
+  color: #cd0000;
 }
 
 .divBtns {
-    margin-bottom: 10px;
-    pad: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    @media (min-width: 768px) {
-    
-        
-        
-    }
-    
-    @media screen and (min-width: 1024px) {
+  margin-bottom: 10px;
+  pad: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  @media (min-width: 768px) {
+  }
 
-         flex-direction: row;
-
-  
-    }    
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .inFavorites {
-    color: #cd0000;
-    
+  color: #cd0000;
 }
 
 .notInFavorites {
-    color: #f8c745;
-
+  color: #f8c745;
 }

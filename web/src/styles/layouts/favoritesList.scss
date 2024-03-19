@@ -1,83 +1,71 @@
-
 .mainFavorites {
-    background-color: #f8c745;
-   overflow-x: hidden;
+  background-color: #f8c745;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media screen and (min-width: 1024px){
-        height: 100vh;
-    }
-   
+  }
 }
-
 
 .favoritesSection {
-
-   width: 100vw;
-    background-color: #f8c745;
+  width: 100vw;
+  background-color: #f8c745;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ulFav {
+  @media screen and (min-width: 1024px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-
-   
-  
-}
-.ulFav{
-    @media screen and (min-width: 1024px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    
-        }
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 .liFavorites {
-    list-style: none;
-  
+  list-style: none;
 }
 
-  
-.divBtns{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.divBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .linkFavorites {
-    text-decoration: none;
-    color: #f8c745;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    padding: 5px;
+  text-decoration: none;
+  color: #f8c745;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  padding: 5px;
 }
 
 .favoritesTitle {
-    margin-top: 10px;
-    text-transform: uppercase;
-    padding: 20px;
-    font-family: 'Impact', sans-serif;
-    font-weight: 100;
-    @media screen and (min-width: 1024px){
-      font-size: 40px;
-    }
+  margin-top: 10px;
+  text-transform: uppercase;
+  padding: 20px;
+  font-family: "Impact", sans-serif;
+  font-weight: 100;
+  @media screen and (min-width: 1024px) {
+    font-size: 40px;
+  }
 }
-.resetButton{
-    text-decoration: none;
-    background-color: black;
-    border: solid black;
-    margin-top: 3px;
+.resetButton {
+  text-decoration: none;
+  background-color: black;
+  border: solid black;
+  margin-top: 3px;
 }
-.deleteIcon{
-    background-color: black;
-    border: solid black;
-    
+.deleteIcon {
+  background-color: black;
+  border: solid black;
 }

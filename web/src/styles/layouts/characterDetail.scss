@@ -1,155 +1,109 @@
-.sectionDetail{
-    height: 100vh;
-    background-color: #f8c745;
-    display:flex ;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    gap: 75px;
+.sectionDetail {
+  height: 100vh;
+  background-color: #f8c745;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
 
-     @media (min-width: 768px) {
+  @media (min-width: 768px) {
+    gap: 25px;
+  }
 
-        gap: 25px;
-    
-    }
-    
-    @media screen and (min-width: 1024px) {
-      gap: 50px;
-      
-    }
+  @media screen and (min-width: 1024px) {
+    gap: 50px;
+  }
 }
-.articleDetail{
-    
-    height: 50vh;
-    width: 85vw;
-   display:flex ;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   gap: 15px;
-   padding: 20px;
+.articleDetail {
+  height: 50vh;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
 
-   @media (min-width: 768px) {
+  @media (min-width: 768px) {
+  }
 
-    
-   }
-   
-   @media screen and (min-width: 1024px) {
-    gap:25px;
-
+  @media screen and (min-width: 1024px) {
+    gap: 25px;
     margin-top: 40px;
-   
-   }
-  
+  }
 }
 
-.artName{
-   
-    text-transform: uppercase;
-height: 50px;
-width: 350px;
-text-align: center;
-background-color: black;
-   font-size: 40px;                     
-  font-family: 'Impacted', sans-serif;
-  font-family: 'Impact', sans-serif;
-font-weight:100;
-color: #f8c745;
-     
-@media (min-width: 768px) {
- margin-top: -150px;
-    
-}
+.artName {
+  text-transform: uppercase;
+  height: 50px;
+  width: 350px;
+  text-align: center;
+  background-color: black;
+  font-size: 40px;
+  font-family: "Impacted", sans-serif;
+  font-family: "Impact", sans-serif;
+  font-weight: 100;
+  color: #f8c745;
 
-@media screen and (min-width: 1024px) {
+  @media (min-width: 768px) {
+    margin-top: -150px;
+  }
+
+  @media screen and (min-width: 1024px) {
     margin-top: 40px;
     font-size: 50px;
     height: 60px;
-}      
+  }
 }
 
+.articledata {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #f8c745;
+  background-color: black;
+  padding: 5px;
 
-
-.articledata{
-
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 200;
-        font-style: normal;
-        color:#f8c745;
-        background-color: black;
-        padding: 5px;
-        @media (min-width: 768px) {
-            // height: 40px;
-            // width: 340px;
-            //   font-size: 30px; 
-            //   text-align: center;
-             
-            
-        }
-        
-        @media screen and (min-width: 1024px) {
-            font-size: 20px;
-            margin-top: 35px;
-          
-           
-       
-        }    
-        
-    
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+    margin-top: 35px;
+  }
 }
 
-.imgCharacter{
-    height: 125px;
-    @media (min-width: 768px) {
-    
-        
-        
-    }
-    
-    @media screen and (min-width: 1024px) {
+.imgCharacter {
+  height: 125px;
+  @media (min-width: 768px) {
+  }
 
-         height:425px
-
-  
-    }    
+  @media screen and (min-width: 1024px) {
+    height: 425px;
+  }
 }
 
-.infoCharacter{
-    text-align:center;
-    @media screen and (min-width: 1024px) {
-display: flex;
-flex-direction: row;
-
-        }   
-        
-        
-
+.infoCharacter {
+  text-align: center;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
-.infoTxt{
+.infoTxt {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
 
-    font-family: "Bebas Neue", sans-serif;
-    font-weight:lighter;
-    font-style: normal;
-   
-    padding: 5px;
-    @media screen and (min-width: 1024px) {
-        margin-top: 35px;
-    }  
+  padding: 5px;
+  @media screen and (min-width: 1024px) {
+    margin-top: 35px;
+  }
 }
 
 .rewindDetail {
-    height: 20px;
-    margin-top: 6px;
-    
-       
-    @media screen and (min-width: 1024px) {
-        padding-top: 100px;
-        
-      
-    
-    
+  height: 20px;
+  margin-top: 6px;
 
-  
-    }   
-   
+  @media screen and (min-width: 1024px) {
+    padding-top: 100px;
+  }
 }

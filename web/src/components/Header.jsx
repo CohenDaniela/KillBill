@@ -1,17 +1,12 @@
-
-import '../styles/core/reset.scss'
-import '../styles/layouts/header.scss'
+import "../styles/core/reset.scss";
+import "../styles/layouts/header.scss";
 
 function Header() {
-
-    return (
-        <>
-            <header className="header">
-
-            </header>
-        </>
-    )
-
-};
+  return (
+    <>
+      <header className="header"></header>
+    </>
+  );
+}
 
 export default Header;

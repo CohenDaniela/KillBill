@@ -1,10 +1,8 @@
-///importar
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 require("dotenv").config();
 // const path = require('path');
-
 
 ///crear servidor
 const app = express();
@@ -15,13 +13,13 @@ app.use(express.json({ limit: "25mb" }));
 
 ///iniciar el servidor
 
-const port = 3001
+const port = 3001;
 // const port =     process.env.PORT || 3001
 
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
-let conn
+let conn;
 ///conexion DB
 async function getConnection() {
   const connection = await mysql.createConnection({
@@ -36,10 +34,7 @@ async function getConnection() {
     `Conexión establecida con la base de datos (identificador=${connection.threadId})`
   );
   return connection;
-
 }
-
-
 
 ///endpoint api
 app.get("/api/KillBill", async (req, res) => {
@@ -57,17 +52,16 @@ app.get("/api/KillBill", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   } finally {
     if (conn) {
-      conn.end(); // Cierra la conexión a la base de datos 
+      conn.end(); // Cierra la conexión a la base de datos
     }
   }
 });
 
-
-const staticServerPath = './public-html';
+const staticServerPath = "./public-html";
 app.use(express.static(staticServerPath));
 
-const staticStylesPath = './public-css';
+const staticStylesPath = "./public-css";
 app.use(express.static(staticStylesPath));
 
-const staticImagePath = './images';
+const staticImagePath = "./images";
 app.use(express.static(staticImagePath));
