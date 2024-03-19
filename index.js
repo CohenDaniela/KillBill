@@ -2,25 +2,19 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 require("dotenv").config();
-// const path = require('path');
 
-///crear servidor
 const app = express();
 
-///configurar el servidor
 app.use(cors());
 app.use(express.json({ limit: "25mb" }));
 
-///iniciar el servidor
-
 const port = 3001;
-// const port =     process.env.PORT || 3001
 
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
 let conn;
-///conexion DB
+
 async function getConnection() {
   const connection = await mysql.createConnection({
     host: process.env.HOST,
@@ -36,11 +30,10 @@ async function getConnection() {
   return connection;
 }
 
-///endpoint api
 app.get("/api/KillBill", async (req, res) => {
   try {
     const conn = await getConnection();
-    const queryAll = "SELECT * FROM freedb_KillBill.characters;";
+    const queryAll = "SELECT * FROM characters;";
     const [results, fields] = await conn.query(queryAll);
 
     console.log(fields);
@@ -52,7 +45,7 @@ app.get("/api/KillBill", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   } finally {
     if (conn) {
-      conn.end(); // Cierra la conexión a la base de datos
+      conn.end();
     }
   }
 });

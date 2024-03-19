@@ -15,6 +15,8 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+USE test;
+
 --
 -- Table structure for table `characters`
 --
@@ -43,7 +45,7 @@ CREATE TABLE `characters` (
 
 LOCK TABLES `characters` WRITE;
 /*!40000 ALTER TABLE `characters` DISABLE KEYS */;
-INSERT INTO `characters` VALUES (1,'Beatrix Michelle Kiddo','The Bride,Black Mamba','Ex-Assassin','Master Martial Artist, Hattori Sword, Knife','Deadly Viper Assassination Squad','28','USA','https://storage.cloud.google.com/killbill_2024/beatrix.jpg','others'),(2,'O-ren Ishii','CottonMouth','Assassin','Katana','Deadly Viper Assassination Squad, Crazy 88','29','Japan','https://storage.cloud.google.com/killbill_2024/oren2.png','five list'),(3,'Vernita Green','Copperhead','Assassin','White weapon','Deadly Viper Assassination Squad','31','USA','https://storage.cloud.google.com/killbill_2024/vernita.jpg','five list'),(4,'Budd','Sidewinder','Ex-Assassin, works in a bar','Hattori Sword','Hattori Sword','47','USA','https://storage.cloud.google.com/killbill_2024/budd.jpg','five list'),(5,'Elle driver','California Mountain Snake','Assassin','Hand-to-Hand Combat','Deadly Viper Assassination Squad','44','USA','https://storage.cloud.google.com/killbill_2024/elledriver.jpg','five list'),(6,'Bill','Snake Charmer','Assassin','Kung Fu','Deadly Viper Assassination Squad','50','USA','https://storage.cloud.google.com/killbill_2024/bill.jpg','five list'),(7,'Hattori Hanzo','服部韓蔵','Sword maker, bar owner','Sword','none','55','Japan','https://storage.cloud.google.com/killbill_2024/Hattori%20Hanzo.jpg','others'),(16,'Pai Mei','Sifu','Master of the art of Kung-fu','Kung Fu,  Five Point Palm Exploding Heart Technique','none','100','China','https://storage.cloud.google.com/killbill_2024/paimei.jpg','others'),(17,'Gogo Yubari','Gogo','Bodyguard, Assassin','Meteor Hammer','Crazy 88','17','Japan','https://storage.cloud.google.com/killbill_2024/gogo.jpg','others');
+INSERT INTO `characters` VALUES (1,'Beatrix Michelle Kiddo','The Bride,Black Mamba','Ex-Assassin','Master Martial Artist, Hattori Sword, Knife','Deadly Viper Assassination Squad','28','USA','/beatrix.jpg','others'),(2,'O-ren Ishii','CottonMouth','Assassin','Katana','Deadly Viper Assassination Squad, Crazy 88','29','Japan','/oren2.png','five list'),(3,'Vernita Green','Copperhead','Assassin','White weapon','Deadly Viper Assassination Squad','31','USA','/vernita.jpg','five list'),(4,'Budd','Sidewinder','Ex-Assassin, works in a bar','Hattori Sword','Hattori Sword','47','USA','/budd.jpg','five list'),(5,'Elle driver','California Mountain Snake','Assassin','Hand-to-Hand Combat','Deadly Viper Assassination Squad','44','USA','/elledriver.jpg','five list'),(6,'Bill','Snake Charmer','Assassin','Kung Fu','Deadly Viper Assassination Squad','50','USA','/bill.jpg','five list'),(7,'Hattori Hanzo','服部韓蔵','Sword maker, bar owner','Sword','none','55','Japan','/Hattori%20Hanzo.jpg','others'),(16,'Pai Mei','Sifu','Master of the art of Kung-fu','Kung Fu, Five Point Palm Exploding Heart Technique','none','100','China','/paimei.jpg','others'),(17,'Gogo Yubari','Gogo','Bodyguard, Assassin','Meteor Hammer','Crazy 88','17','Japan','/gogo.jpg','others');
 /*!40000 ALTER TABLE `characters` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
