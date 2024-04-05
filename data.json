@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "Beatrix Michelle Kiddo",
+        "alias": "The Bride, Black Mamba",
+        "occupation": "Ex-Assassin",
+        "weapons": "Master Martial Artist, Hattori Sword, Knife",
+        "affiliation": "Deadly Viper Assassination Squad",
+        "age": "28",
+        "country": "USA",
+        "image": "/beatrix.jpg",
+        "category": "others"
+    },
+    {
+        "id": 2,
+        "name": "O-ren Ishii",
+        "alias": "CottonMouth",
+        "occupation": "Assassin",
+        "weapons": "Katana",
+        "affiliation": "Deadly Viper Assassination Squad, Crazy 88",
+        "age": "29",
+        "country": "Japan",
+        "image": "/oren2.png",
+        "category": "five list"
+    },
+    {
+        "id": 3,
+        "name": "Vernita Green",
+        "alias": "Copperhead",
+        "occupation": "Assassin",
+        "weapons": "White weapon",
+        "affiliation": "Deadly Viper Assassination Squad",
+        "age": "31",
+        "country": "USA",
+        "image": "/vernita.jpg",
+        "category": "five list"
+    },
+    {
+        "id": 4,
+        "name": "Budd",
+        "alias": "Sidewinder",
+        "occupation": "Ex-Assassin, works in a bar",
+        "weapons": "Hattori Sword",
+        "affiliation": "Hattori Sword",
+        "age": "47",
+        "country": "USA",
+        "image": "/budd.jpg",
+        "category": "five list"
+    },
+    {
+        "id": 5,
+        "name": "Elle driver",
+        "alias": "California Mountain Snake",
+        "occupation": "Assassin",
+        "weapons": "Hand-to-Hand Combat",
+        "affiliation": "Deadly Viper Assassination Squad",
+        "age": "44",
+        "country": "USA",
+        "image": "/elledriver.jpg",
+        "category": "five list"
+    },
+    {
+        "id": 6,
+        "name": "Bill",
+        "alias": "Snake Charmer",
+        "occupation": "Assassin",
+        "weapons": "Kung Fu",
+        "affiliation": "Deadly Viper Assassination Squad",
+        "age": "50",
+        "country": "USA",
+        "image": "/bill.jpg",
+        "category": "five list"
+    },
+    {
+        "id": 7,
+        "name": "Hattori Hanzo",
+        "alias": "服部韓蔵",
+        "occupation": "Sword maker, bar owner",
+        "weapons": "Sword",
+        "affiliation": "none",
+        "age": "55",
+        "country": "Japan",
+        "image": "/Hattori%20Hanzo.jpg",
+        "category": "others"
+    },
+    {
+        "id": 8,
+        "name": "Pai Mei",
+        "alias": "Sifu",
+        "occupation": "Master of the art of Kung-fu",
+        "weapons": "Kung Fu, Five Point Palm Exploding Heart Technique",
+        "affiliation": "none",
+        "age": "100",
+        "country": "China",
+        "image": "/paimei.jpg",
+        "category": "others"
+    },
+    {
+        "id": 9,
+        "name": "Gogo Yubari",
+        "alias": "Gogo",
+        "occupation": "Bodyguard, Assassin",
+        "weapons": "Meteor Hammer",
+        "affiliation": "Crazy 88",
+        "age": "17",
+        "country": "Japan",
+        "image": "/gogo.jpg",
+        "category": "others"
+    }
+]

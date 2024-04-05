@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const mysql = require("mysql2/promise");
+const fs = require("fs");
 require("dotenv").config();
 
 const app = express();
@@ -8,45 +8,20 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "25mb" }));
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
-let conn;
-
-async function getConnection() {
-  const connection = await mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER_DB,
-    password: process.env.PASS,
-    database: process.env.DATABASE,
-  });
-
-  await connection.connect();
-  console.log(
-    `Conexión establecida con la base de datos (identificador=${connection.threadId})`
-  );
-  return connection;
-}
 
 app.get("/api/KillBill", async (req, res) => {
   try {
-    const conn = await getConnection();
-    const queryAll = "SELECT * FROM characters;";
-    const [results, fields] = await conn.query(queryAll);
-
-    console.log(fields);
-    console.log(results);
-
-    res.json(results);
+    const data = fs.readFileSync("data.json", "utf8");
+    const jsonData = JSON.parse(data);
+    res.json(jsonData);
   } catch (error) {
-    console.error("Error executing query:", error);
+    console.error("Internal error: ", error);
     res.status(500).json({ error: "Internal Server Error" });
-  } finally {
-    if (conn) {
-      conn.end();
-    }
   }
 });
 
